@@ -1,0 +1,208 @@
+html {
+    color: white;
+    box-sizing: border-box;
+   font-family: 'Share Tech Mono', monospace;
+
+    font-size: 72.5%;
+    
+
+}
+
+
+body {
+
+    text-align: center;
+    background-color: #353535;   
+}
+
+
+.title {
+    
+}
+
+
+
+.glow {
+  
+  color: #fff;
+  
+  -webkit-animation: glow 0.9s ease-in-out infinite alternate;
+  -moz-animation: glow 0.9s ease-in-out infinite alternate;
+  animation: glow 0.9s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #E92066, 0 0 40px #E92066, 0 0 50px #E92066, 0 0 60px #E92066, 0 0 70px #E92066;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff3665, 0 0 40px #ff3665, 0 0 50px #ff3665, 0 0 60px #ff3665, 0 0 70px #ff3665, 0 0 80px #ff3665;
+  }
+}
+
+
+
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+  5% {
+    opacity: 0.34769;
+  }
+  10% {
+    opacity: 0.23604;
+  }
+  15% {
+    opacity: 0.90626;
+  }
+  20% {
+    opacity: 0.18128;
+  }
+  25% {
+    opacity: 0.83891;
+  }
+  30% {
+    opacity: 0.65583;
+  }
+  35% {
+    opacity: 0.67807;
+  }
+  40% {
+    opacity: 0.26559;
+  }
+  45% {
+    opacity: 0.84693;
+  }
+  50% {
+    opacity: 0.96019;
+  }
+  55% {
+    opacity: 0.08594;
+  }
+  60% {
+    opacity: 0.20313;
+  }
+  65% {
+    opacity: 0.71988;
+  }
+  70% {
+    opacity: 0.53455;
+  }
+  75% {
+    opacity: 0.37288;
+  }
+  80% {
+    opacity: 0.71428;
+  }
+  85% {
+    opacity: 0.70419;
+  }
+  90% {
+    opacity: 0.7003;
+  }
+  95% {
+    opacity: 0.36108;
+  }
+  100% {
+    opacity: 0.24387;
+  }
+}
+
+.crt::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 18, 16, 0.2);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
+.crt::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+.crt {
+  animation: textShadow 1.6s infinite;
+}
+       
+
+
+
+
+
+@keyframes flash {
+    
+    50%{
+        background: rgb(142, 153, 153);
+    }
+   
+    100% {
+        background: white;
+    }
+}
+
+    @keyframes background-change {
+
+        0% {
+            background: rgb(142, 153, 153);
+        }
+        100% {
+            background: white;
+            color:rgb(53, 56, 56);
+        }
+    }
+
+.header {
+    float: left;
+    text-align: left;
+}
+.typewriter {
+    font-family: 'Share Tech Mono', monospace;
+    float: left;
+	display: inline-block;
+}
+
+.typewriter-text {
+    text-align: left;
+    display: block;
+  	overflow: hidden;
+  	letter-spacing: 0px;
+ 	animation: typing 5s steps(30, end), blink .75s step-end infinite;
+    white-space: nowrap;
+    font-size: 1rem;
+    
+    border-right: 3px solid orange;
+  
+}
+
+@keyframes typing {
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 100% 
+    }
+}
+
+@keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: orange; 
+    }
+}
